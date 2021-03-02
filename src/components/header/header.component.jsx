@@ -9,7 +9,7 @@ const Header = () => (
     <div className="container">
       <div className="logo">
         <NavLink className="option" to="/">
-          avi patel
+          avi patelfesfsef
         </NavLink>
       </div>
 
