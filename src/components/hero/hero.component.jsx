@@ -62,11 +62,11 @@ const Hero = () => {
         <ScrollAniContainer className="container" />
         <ScrollAniCircle className="circle" />
       </div>
-      <Triangle1 className="triangle1" />
-      <Triangle2 className="triangle2" />
-      <Triangle3 className="triangle3" />
-      <Triangle4 className="triangle4" />
-      <Triangle5 className="triangle5" />
+      <Triangle1 className="triangle triangle1" />
+      <Triangle2 className="triangle triangle2" />
+      <Triangle3 className="triangle triangle3" />
+      <Triangle4 className="triangle triangle4" />
+      <Triangle5 className="triangle triangle5" />
     </div>
   );
 };
