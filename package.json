@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "homepage": "http://aviipatell.github.io/personal-website",
+  "homepage": "http://aviipatell.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
