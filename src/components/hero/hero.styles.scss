@@ -80,9 +80,10 @@ $main: #edf2f4;
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      animation: scrollAni infinite ease-in-out 2s;
+      animation: scrollAni ease-in-out 2s;
       //   animation-fill-mode: forwards;
-      animation-play-state: paused;
+      animation-iteration-count: 5;
+      animation-play-state: play;
     }
   }
 

@@ -21,3 +21,13 @@ $main: #edf2f4;
     margin-right: 20px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .customButton {
+    &.resumeButton {
+      background: #8d99ae;
+      color: $main;
+      border-color: #8d99ae;
+    }
+  }
+}

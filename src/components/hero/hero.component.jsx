@@ -13,6 +13,8 @@ import { ReactComponent as ScrollAniContainer } from "../../assets/icons/scrollA
 import { ReactComponent as ScrollAniCircle } from "../../assets/icons/ScrollAniCircle.svg";
 import Resume from "../../assets/documents/Avi-Patel-Resume.pdf";
 
+import { HashLink } from "react-router-hash-link";
+
 const Hero = () => {
   function handleContactPrompt(e) {
     e.preventDefault();
@@ -55,13 +57,13 @@ const Hero = () => {
           Contact
         </CustomButton>
         <a href={Resume} target="_blank">
-          <CustomButton>Resume</CustomButton>
+          <CustomButton resumeButton>Resume</CustomButton>
         </a>
       </div>
-      <div className="scrollAni">
+      <HashLink to="/#work" smooth={true} duration={800} className="scrollAni">
         <ScrollAniContainer className="container" />
         <ScrollAniCircle className="circle" />
-      </div>
+      </HashLink>
       <Triangle1 className="triangle triangle1" />
       <Triangle2 className="triangle triangle2" />
       <Triangle3 className="triangle triangle3" />
