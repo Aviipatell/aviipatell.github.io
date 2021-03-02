@@ -19,11 +19,18 @@ const AboutPage = () => {
     e.preventDefault();
     console.log("Contact Button pressed");
     document.querySelector(".contactPanel").classList.toggle("visible");
+    if (document.querySelector(".contactPanel").classList.contains("visible")) {
+      document.querySelector(".imageSection").classList.add("darken");
+      document.querySelector(".content").classList.add("darken");
+    } else {
+      document.querySelector(".imageSection").classList.remove("darken");
+      document.querySelector(".content").classList.remove("darken");
+    }
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
   return (
-    <div className="aboutPage darken">
+    <div className="aboutPage">
       <div className="imageSection">
         <h2 className="greeting">Hello!</h2>
         <div className="imageContainer">

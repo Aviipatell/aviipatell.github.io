@@ -22,6 +22,14 @@ $main: #edf2f4;
     max-width: 700px;
     margin: 0 auto;
 
+    &.darken {
+      .imageContainer {
+        &::after {
+          background-color: rgba(#2b2d42, 0.5);
+        }
+      }
+    }
+
     .greeting {
       font-size: 3em;
       color: $main;
@@ -57,6 +65,10 @@ $main: #edf2f4;
     margin: 0 auto;
     position: relative;
 
+    &.darken {
+      opacity: 0.55;
+    }
+
     .heading {
       color: $main;
       font-size: 1.8em;
@@ -89,7 +101,7 @@ $main: #edf2f4;
   .contactPanel {
     // position: absolute;
     // top: -200px;
-    top: 40%;
+    top: 35%;
   }
 }
 

@@ -8,6 +8,10 @@ $main: #edf2f4;
   padding: 0 30px;
   padding-top: 80px;
 
+  &.darken {
+    opacity: 0.55;
+  }
+
   .sectionTitle {
     text-transform: capitalize;
     position: relative;

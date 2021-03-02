@@ -12,6 +12,10 @@ $main: #edf2f4;
   height: 100vh;
   padding-top: 0px;
 
+  &.darken {
+    opacity: 0.55;
+  }
+
   .heroTitle {
     color: $main;
     // border: 1px solid red;

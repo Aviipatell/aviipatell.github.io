@@ -12,6 +12,14 @@ const ContactPanel = () => {
   function closeOverlay() {
     var contactPanel = document.querySelector(".contactPanel");
     contactPanel.classList.remove("visible");
+    if (document.querySelector(".aboutPage") != null) {
+      document.querySelector(".imageSection").classList.remove("darken");
+      document.querySelector(".content").classList.remove("darken");
+    } else if (document.querySelector(".homePage") != null) {
+      document.querySelector(".hero").classList.remove("darken");
+      document.querySelector(".featureSection").classList.remove("darken");
+      document.querySelector(".contactPrompt").classList.remove("darken");
+    }
   }
 
   return (

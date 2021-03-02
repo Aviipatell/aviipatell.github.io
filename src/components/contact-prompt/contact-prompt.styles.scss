@@ -7,6 +7,10 @@ $main: #edf2f4;
   padding-top: 60px;
   padding-bottom: 30px;
 
+  &.darken {
+    opacity: 0.55;
+  }
+
   .sectionTitle {
     color: $main;
     font-size: 1.2em;
