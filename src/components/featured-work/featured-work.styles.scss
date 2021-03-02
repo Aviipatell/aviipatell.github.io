@@ -42,14 +42,14 @@ $main: #edf2f4;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
+    // row-gap: 100px;
   }
 }
 
 @media screen and (min-width: 700px) {
   .featureSection {
     .sectionContent {
-      row-gap: 50px;
+      // row-gap: 50px;
     }
   }
 }

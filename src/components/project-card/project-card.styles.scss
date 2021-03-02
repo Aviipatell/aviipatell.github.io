@@ -7,6 +7,11 @@ $main: #edf2f4;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 100px;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
 
   .projectImage {
     min-width: 100%;
@@ -19,6 +24,7 @@ $main: #edf2f4;
     .image {
       padding: 8% 0;
       width: 90%;
+      height: 90%;
     }
   }
 
@@ -69,6 +75,7 @@ $main: #edf2f4;
     flex-direction: row;
     position: relative;
     align-items: center;
+    margin-bottom: 50px;
 
     .projectImage {
       min-width: 40%;
