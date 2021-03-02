@@ -9,7 +9,7 @@ function FeaturedWork() {
   //   const [projects, setProjects] = useState(PROJECTS_DATA);
 
   return (
-    <section className="featureSection">
+    <section className="featureSection" id="work">
       <h3 className="sectionTitle">Featured Work</h3>
       <div className="sectionContent">
         {PROJECTS_DATA.map(({ id, ...otherInfo }) => (

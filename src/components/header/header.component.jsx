@@ -2,6 +2,7 @@ import React from "react";
 import "./header.styles.scss";
 
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => (
   <div className="header">
@@ -17,9 +18,9 @@ const Header = () => (
           home
         </NavLink>
 
-        <NavLink className="option" to="/">
+        <HashLink className="option" to="/#work" smooth={true} duration={800}>
           work
-        </NavLink>
+        </HashLink>
 
         <NavLink
           exact
