@@ -3,8 +3,9 @@ $background: #2b2d42;
 $main: #edf2f4;
 
 .aboutPage {
-  //   border: 1px solid red;
+  // border: 1px solid red;
   padding: 0 28px;
+  position: relative;
 
   .triangle {
     display: none;
@@ -83,6 +84,12 @@ $main: #edf2f4;
       justify-content: center;
       padding-bottom: 30px;
     }
+  }
+
+  .contactPanel {
+    // position: absolute;
+    // top: -200px;
+    top: 40%;
   }
 }
 
