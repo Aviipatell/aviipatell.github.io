@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Header = () => (
-  <div className="header">
+  <div className="header" id="nav">
     <div className="container">
       <div className="logo">
         <NavLink className="option" to="/">

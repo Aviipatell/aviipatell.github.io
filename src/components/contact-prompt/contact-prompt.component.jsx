@@ -8,6 +8,15 @@ const ContactPrompt = () => {
     e.preventDefault();
     console.log("Contact Button pressed");
     document.querySelector(".contactPanel").classList.toggle("visible");
+    if (document.querySelector(".contactPanel").classList.contains("visible")) {
+      document.querySelector(".hero").classList.add("darken");
+      document.querySelector(".featureSection").classList.add("darken");
+      document.querySelector(".contactPrompt").classList.add("darken");
+    } else {
+      document.querySelector(".hero").classList.remove("darken");
+      document.querySelector(".featureSection").classList.remove("darken");
+      document.querySelector(".contactPrompt").classList.remove("darken");
+    }
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
