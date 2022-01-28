@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="heroTitle ">
-        <h1>Hi, I'm Avi.</h1>
+        <h1>Hi, I'm Avi Patel.</h1>
       </div>
       <div className="heroText">
         <p className="description">
@@ -48,7 +48,11 @@ const Hero = () => {
         </p>
       </div>
       <div className="heroButtons">
-        <a href="mailto:avipatel.dev@gmail.com" rel="noreferrer" target="_blank">
+        <a
+          href="mailto:avipatel.dev@gmail.com"
+          rel="noreferrer"
+          target="_blank"
+        >
           <CustomButton giveMarginR accent resumeButton>
             Connect with Me
           </CustomButton>
