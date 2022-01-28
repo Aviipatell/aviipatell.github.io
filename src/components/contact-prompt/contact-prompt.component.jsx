@@ -3,6 +3,8 @@ import "./contact-prompt.styles.scss";
 
 import CustomButton from "../custom-button/custom-button.component";
 
+import Resume from "../../assets/documents/Avi-Patel-Resume.pdf";
+
 const ContactPrompt = () => {
   function handleContactPrompt(e) {
     e.preventDefault();
@@ -25,9 +27,38 @@ const ContactPrompt = () => {
     <section className="contactPrompt">
       <p className="sectionTitle">Feel free to reach out!</p>
       <div className="buttonContainer">
-        <CustomButton id="contactButton" onClick={handleContactPrompt} accent>
-          Contact
-        </CustomButton>
+        <a
+          href="mailto:avipatel.dev@gmail.com"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <CustomButton giveMarginR bottomButton accent resumeButton>
+            Connect with Me
+          </CustomButton>
+        </a>
+        <a href={Resume} rel="noreferrer" target="_blank">
+          <CustomButton giveMarginR bottomButton resumeButton>
+            Resume
+          </CustomButton>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/aviipatell/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <CustomButton giveMarginR bottomButton resumeButton>
+            LinkedIn
+          </CustomButton>
+        </a>
+        <a
+          href="https://twitter.com/aviipatell"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <CustomButton resumeButton bottomButton>
+            Twitter
+          </CustomButton>
+        </a>
       </div>
     </section>
   );

@@ -2,21 +2,32 @@ import React from "react";
 import "./project-card.styles.scss";
 
 import LinkButton from "../link-button/link-button.component";
-import BridgesMockup from "../../assets/images/project-mockup-bridges-old.png";
+import BridgesMockup from "../../assets/images/project-mockup-bridges.png";
 import PokemonMockup from "../../assets/images/project-mockup-pokemon.png";
+import OkRxMockup from "../../assets/images/project-mockup-okrx.png";
 
 const ProjectCard = ({
   key,
-  otherInfo: { title, tools, summary, image, githubLink, learnMore },
+  otherInfo: {
+    title,
+    tools,
+    summary,
+    image,
+    githubLink,
+    liveLink,
+    learnMoreLink,
+  },
 }) => (
   <div className="projectCard">
     <div className="projectImage">
       <img
         className="image"
-        alt="Project Image"
+        alt="Project Mockup"
         src={
-          title == "Bridges to University Website"
+          title === "Bridges to University"
             ? BridgesMockup
+            : title === "OkRx"
+            ? OkRxMockup
             : PokemonMockup
         }
       />
@@ -29,18 +40,18 @@ const ProjectCard = ({
         {githubLink ? (
           <div className="githubLinkContainer">
             <LinkButton
-              className="githubLink"
+              className="accentLink githubLink"
               text="View on Github"
               url={githubLink}
             />
           </div>
         ) : null}
-        {learnMore ? (
-          <div className="learnMoreLinkContainer">
+        {liveLink ? (
+          <div className="liveLinkContainer">
             <LinkButton
-              className="learnMoreLink"
-              text="Learn more"
-              url={learnMore}
+              className="accentLink liveLink"
+              text="View Live"
+              url={liveLink}
             />
           </div>
         ) : null}

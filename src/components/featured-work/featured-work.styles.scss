@@ -43,11 +43,13 @@ $main: #edf2f4;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     // row-gap: 100px;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 890px) {
   .featureSection {
     .sectionContent {
       // row-gap: 50px;

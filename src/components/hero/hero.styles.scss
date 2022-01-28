@@ -9,10 +9,11 @@ $main: #edf2f4;
   flex-direction: column;
   align-items: center;
   padding: 0 28px;
-  height: 100vh;
+  min-height: 900px;
   padding-top: 0px;
   overflow: hidden;
-  z-index: -2;
+  // z-index: -2;
+  position: relative;
 
   &.darken {
     opacity: 0.55;
@@ -73,6 +74,7 @@ $main: #edf2f4;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%);
+    z-index: 10;
 
     .circle {
       position: absolute;
@@ -83,9 +85,13 @@ $main: #edf2f4;
       margin-right: auto;
       animation: scrollAni ease-in-out 2s;
       //   animation-fill-mode: forwards;
-      animation-iteration-count: 5;
+      animation-iteration-count: infinite;
       animation-play-state: play;
     }
+  }
+
+  .triangleRotate {
+    animation: rotate1 ease-in-out 5s infinite;
   }
 
   .triangle {
@@ -93,8 +99,9 @@ $main: #edf2f4;
   }
 
   .triangle1 {
-    // border: 1px solid red;
     transform: scale(0.8);
+    display: block;
+    // transform: rotate(95deg);
     position: absolute;
     bottom: 20%;
     left: 0%;
@@ -110,7 +117,6 @@ $main: #edf2f4;
 
   .triangle3 {
     // border: 1px solid red;
-    transform: scale(1);
     transform: scale(0.9);
     position: absolute;
     bottom: 40%;
@@ -318,6 +324,14 @@ $main: #edf2f4;
   }
 }
 
+@media screen and (max-width: 400px) {
+  .heroButtons {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+}
+
 .typewriter {
   overflow: hidden;
   border-right: 0.15em solid orange;
@@ -343,5 +357,26 @@ $main: #edf2f4;
   }
   50% {
     border-color: orange;
+  }
+}
+
+@keyframes rotate-bounce {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

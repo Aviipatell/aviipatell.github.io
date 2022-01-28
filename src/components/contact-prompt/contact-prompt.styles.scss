@@ -4,9 +4,8 @@ $main: #edf2f4;
 
 .contactPrompt {
   background-color: $background;
-  padding-top: 60px;
-  padding-bottom: 30px;
-  
+  padding-top: 80px;
+  padding-bottom: 240px;
 
   &.darken {
     opacity: 0.55;
@@ -20,9 +19,41 @@ $main: #edf2f4;
   }
 
   .buttonContainer {
-    display: inline-block;
+    display: flex;
     position: relative;
+    justify-content: center;
     left: 50%;
     transform: translate(-50%);
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .buttonContainer {
+    // flex-direction: column;
+    row-gap: 20px;
+    // align-items: center;
+  }
+
+  .buttonContainer {
+    a {
+      flex-basis: 50%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .buttonContainer {
+    // flex-direction: column;
+    row-gap: 20px;
+    // align-items: center;
+  }
+
+  .buttonContainer {
+    a {
+      flex-basis: 100%;
+      text-align: center;
+    }
   }
 }

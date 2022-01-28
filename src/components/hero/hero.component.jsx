@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <div className="heroTitle">
+      <div className="heroTitle ">
         <h1>Hi, I'm Avi.</h1>
       </div>
       <div className="heroText">
@@ -44,19 +44,16 @@ const Hero = () => {
           learning.
         </p>
         <p className="tagline">
-          Currently seeking Summer 2021 co&#x2011;op opportunities.
+          Currently seeking Summer 2022 co&#x2011;op opportunities.
         </p>
       </div>
       <div className="heroButtons">
-        <CustomButton
-          id="contactButton"
-          accent
-          giveMarginR
-          onClick={handleContactPrompt}
-        >
-          Contact
-        </CustomButton>
-        <a href={Resume} target="_blank">
+        <a href="mailto:avipatel.dev@gmail.com" rel="noreferrer" target="_blank">
+          <CustomButton giveMarginR accent resumeButton>
+            Connect with Me
+          </CustomButton>
+        </a>
+        <a href={Resume} rel="noreferrer" target="_blank">
           <CustomButton resumeButton>Resume</CustomButton>
         </a>
       </div>

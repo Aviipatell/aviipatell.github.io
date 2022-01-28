@@ -14,6 +14,8 @@ import { ReactComponent as Triangle4 } from "../../assets/icons/triangle4.svg";
 import { ReactComponent as Triangle5 } from "../../assets/icons/triangle5.svg";
 import { ReactComponent as Triangle6 } from "../../assets/icons/triangle6.svg";
 
+import Resume from "../../assets/documents/Avi-Patel-Resume.pdf";
+
 const AboutPage = () => {
   function handleContactPrompt(e) {
     e.preventDefault();
@@ -58,17 +60,27 @@ const AboutPage = () => {
         <p>
           Thanks for visiting, hope you enjoyed my site! If you have any
           questions or concerns or would like to get to know me better, feel
-          free to reach out below! I’m always up for a cup of coffee.
+          free to reach out below!
         </p>
-        <p>Email: avi.patel0025@gmail.com</p>
+        <p>
+          Email:{" "}
+          <a className="accentLink" href="mailto:avipatel.dev@gmail.com">
+            avipatel.dev@gmail.com
+          </a>
+        </p>
 
         <Triangle5 className="triangle triangle5" />
         <Triangle6 className="triangle triangle6" />
 
         <div className="buttonContainer">
-          <CustomButton onClick={handleContactPrompt} accent>
-            Contact
-          </CustomButton>
+          <a href={Resume} target="_blank">
+            <CustomButton giveMarginR accent resumeButton>
+              Connect with Me
+            </CustomButton>
+          </a>
+          <a href={Resume} target="_blank">
+            <CustomButton resumeButton>Resume</CustomButton>
+          </a>
         </div>
       </div>
       <ContactPanel id="contactPanel" />

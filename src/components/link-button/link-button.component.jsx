@@ -8,7 +8,8 @@ import { ReactComponent as LinkArrow } from "../../assets/icons/right-arrow.svg"
 const LinkButton = ({ text, url }) => (
   <div className="linkButton">
     <a target="_blank" href={url} className="link">
-      {text} <LinkArrow className="linkArrow" />
+      <span className="accentLink">{text}</span>{" "}
+      <LinkArrow className="linkArrow" />
     </a>
   </div>
 );

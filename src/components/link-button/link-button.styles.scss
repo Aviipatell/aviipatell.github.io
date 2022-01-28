@@ -15,4 +15,31 @@ $main: #edf2f4;
       margin-left: 10px;
     }
   }
+
+  .accentLink {
+    position: relative;
+    cursor: pointer;
+    color: $main;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      background-color: red;
+      height: 80%;
+      width: 0;
+      bottom: 00%;
+      background-color: #4a93fb;
+      opacity: 0.35;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
 }

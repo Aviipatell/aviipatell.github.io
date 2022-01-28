@@ -54,9 +54,17 @@ $main: #edf2f4;
         width: 85%;
         height: 40%;
         z-index: -1;
+        transition: background-color 0.3s, opacity 0.3s;
       }
 
       &.selected {
+        &::after {
+          background-color: #4a93fb;
+          opacity: 0.35;
+        }
+      }
+
+      &:hover {
         &::after {
           background-color: #4a93fb;
           opacity: 0.35;
