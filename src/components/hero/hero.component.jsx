@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="heroTitle ">
-        <h1>Hi, I'm Avi Patel.</h1>
+        <h1>Hi, I'm Avi.</h1>
       </div>
       <div className="heroText">
         <p className="description">
