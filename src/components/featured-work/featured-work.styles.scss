@@ -43,16 +43,16 @@ $main: #edf2f4;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // border: 1px solid red;
 
     // row-gap: 100px;
   }
 }
 
-@media screen and (min-width: 890px) {
+@media screen and (max-width: 890px) {
   .featureSection {
     .sectionContent {
-      // row-gap: 50px;
+      align-items: center;
     }
   }
 }

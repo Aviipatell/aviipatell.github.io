@@ -34,8 +34,10 @@ $main: #edf2f4;
   .projectInfo {
     // border: 1px solid red;
     color: $main;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     .title {
       font-size: 1.4em;
@@ -102,14 +104,14 @@ $main: #edf2f4;
 
 @media screen and (min-width: 700px) {
   .projectCard {
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     align-items: center;
     margin-bottom: 50px;
 
+    width: 80%;
+
     .projectImage {
-      // min-width: 40%;
-      // width: 40%;
       .image {
       }
       // height: auto;
@@ -118,6 +120,26 @@ $main: #edf2f4;
     .projectInfo {
       padding-left: 15px;
       padding-right: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .projectCard {
+    // border: 1px solid red;
+    flex-direction: row;
+
+    width: 100%;
+
+    .projectImage {
+      min-width: 40%;
+      width: 40%;
+    }
+
+    .projectInfo {
+      padding-top: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 }
@@ -147,21 +169,6 @@ $main: #edf2f4;
 
     .projectImage {
       min-width: 55%;
-    }
-  }
-}
-
-@media screen and (max-width: 890px) {
-  .projectCard {
-    // border: 1px solid red;
-    flex-direction: column;
-
-    width: 80%;
-
-    .projectInfo {
-      padding-top: 30px;
-      padding-left: 40px;
-      padding-right: 40px;
     }
   }
 }
