@@ -1,0 +1,22 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  overflow: none;
+  background: $background;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import "./project-card.styles.scss";
 
 import LinkButton from "../link-button/link-button.component";
-import BridgesMockup from "../../assets/images/project-mockup-bridges.png";
+import BridgesMockup from "../../assets/images/project-mockup-bridges-old.png";
 import PokemonMockup from "../../assets/images/project-mockup-pokemon.png";
 
 const ProjectCard = ({

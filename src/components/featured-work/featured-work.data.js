@@ -5,7 +5,7 @@ const PROJECTS_DATA = [
     tools: "Python, Django, SQLite, Heroku, JavaScript, Test, Test, Testing",
     summary:
       "Developed a dynamic website to host university-related articles for students.",
-    image: "project-mockup-bridges.png",
+    image: "project-mockup-bridges-old.png",
     githubLink: "https://github.com/BridgestoUniversity/main-website",
     // learnMore: "http://www.bridgestouni.com/",
   },
