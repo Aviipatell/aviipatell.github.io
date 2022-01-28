@@ -1,0 +1,27 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.contactPrompt {
+  background-color: $background;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  &.darken {
+    opacity: 0.55;
+  }
+
+  .sectionTitle {
+    color: $main;
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .buttonContainer {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

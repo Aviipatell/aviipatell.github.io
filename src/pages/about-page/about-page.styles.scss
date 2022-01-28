@@ -1,0 +1,291 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.aboutPage {
+  // border: 1px solid red;
+  padding: 0 28px;
+  position: relative;
+
+  .triangle {
+    display: none;
+  }
+
+  .imageSection {
+    // border: 1px solid purple;
+    padding-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    // border: 1px solid red;
+    max-width: 700px;
+    margin: 0 auto;
+
+    &.darken {
+      .imageContainer {
+        &::after {
+          background-color: rgba(#2b2d42, 0.5);
+        }
+      }
+    }
+
+    .greeting {
+      font-size: 3em;
+      color: $main;
+      position: absolute;
+      opacity: 0.08;
+      z-index: -1;
+      transform: translateY(-75%);
+    }
+
+    .imageContainer {
+      width: 80%;
+      position: relative;
+
+      .image {
+        width: 100%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(#2b2d42, 0.25);
+      }
+    }
+  }
+
+  .content {
+    // border: 1px solid cyan;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+
+    &.darken {
+      opacity: 0.55;
+    }
+
+    .heading {
+      color: $main;
+      font-size: 1.8em;
+      padding-bottom: 10px;
+    }
+
+    .tagline {
+      color: $main;
+      font-size: 1.1em;
+      opacity: 0.72;
+      padding-bottom: 30px;
+    }
+
+    p {
+      color: $main;
+      font-size: 1em;
+      line-height: 30px;
+      padding-bottom: 30px;
+    }
+
+    .buttonContainer {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+  }
+
+  .contactPanel {
+    // position: absolute;
+    // top: -200px;
+    top: 35%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .aboutPage {
+    .imageSection {
+      padding-bottom: 30px;
+      .greeting {
+        font-size: 3.5em;
+      }
+    }
+    .content {
+      .heading {
+        font-size: 2em;
+      }
+      .tagline {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .aboutPage {
+    .imageSection {
+      padding-top: 180px;
+      padding-bottom: 40px;
+      .triangle {
+        display: block;
+        position: absolute;
+        transform: scale(0.7);
+
+        &.triangle3 {
+          left: -5%;
+          top: 35%;
+        }
+
+        &.triangle4 {
+          right: 0;
+          top: 55%;
+        }
+      }
+      .imageContainer {
+        width: 60%;
+      }
+      .greeting {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .aboutPage {
+    .imageSection {
+      padding-bottom: 40px;
+      .imageContainer {
+        width: 60%;
+      }
+      .greeting {
+        font-size: 4.5em;
+      }
+      .triangle {
+        transform: scale(0.8);
+        &.triangle3 {
+          left: -19%;
+        }
+        &.triangle4 {
+          right: -20%;
+        }
+      }
+    }
+    .content {
+      .heading {
+        font-size: 2.2em;
+      }
+      .tagline {
+        font-size: 1.4em;
+      }
+      p {
+        font-size: 1.1em;
+      }
+      .triangle5,
+      .triangle6 {
+        display: block;
+        transform: scale(0.6);
+        position: absolute;
+      }
+
+      .triangle5 {
+        // border: 1px solid blue;
+        bottom: 35%;
+        left: -17%;
+      }
+
+      .triangle6 {
+        // border: 1px solid red;
+        bottom: 20%;
+        right: -10%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .aboutPage {
+    .imageSection {
+      padding-top: 200px;
+      .imageContainer {
+        width: 80%;
+      }
+    }
+
+    .content {
+      .triangle1,
+      .triangle2 {
+        display: block;
+        transform: scale(1);
+        position: absolute;
+      }
+
+      .triangle1 {
+        // border: 1px solid blue;
+        left: -28%;
+        transform: scale(0.9);
+      }
+
+      .triangle2 {
+        // border: 1px solid red;
+        right: -17%;
+        top: -5%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .aboutPage {
+    .imageSection {
+      .triangle.triangle3 {
+        transform: scale(1.1);
+        left: -26%;
+        top: 30%;
+      }
+      .triangle.triangle4 {
+        transform: scale(1);
+        top: 40%;
+        right: -25%;
+      }
+    }
+    .content {
+      .triangle1,
+      .triangle2 {
+        display: block;
+        position: absolute;
+      }
+
+      .triangle1 {
+        // border: 1px solid blue;
+        left: -37%;
+        transform: scale(1.2);
+      }
+
+      .triangle2 {
+        // border: 1px solid red;
+        right: -22%;
+        transform: scale(1.2);
+        top: -5%;
+      }
+
+      .triangle5 {
+        transform: scale(0.8);
+        left: -22%;
+        bottom: 32%;
+      }
+
+      .triangle6 {
+        transform: scale(0.8);
+        bottom: 20%;
+        right: -20%;
+      }
+    }
+  }
+}

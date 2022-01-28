@@ -1,0 +1,126 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.contactPanel {
+  height: auto;
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba($background, 0.98);
+  //   filter: blur(5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px 5px rgba($accent, 0.4);
+  border-radius: 15px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+
+  &.visible {
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .title {
+    font-size: 2em;
+    color: $main;
+    padding-bottom: 10px;
+  }
+
+  .tagline {
+    font-size: 0.9em;
+    color: $main;
+    opacity: 0.7;
+    padding-bottom: 30px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .message {
+    font-size: 1.2em;
+    color: $main;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .otherLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+
+    .linkContainer {
+      color: $main;
+      font-size: 1.1em;
+
+      .emailLink {
+        color: $main;
+      }
+    }
+  }
+
+  .socialLinks {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    li {
+      padding: 5px;
+      // border: 1px solid red;
+      //   margin-right: 2px;
+      margin: 0 8px;
+
+      .linkedIn,
+      .github,
+      .twitter {
+        transform: scale(1.4);
+      }
+
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contactPanel {
+    // background-color: white;
+    width: 80%;
+    top: 48%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contactPanel {
+    top: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactPanel {
+    top: 41%;
+    .title {
+      font-size: 1.8em;
+    }
+
+    .tagline {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactPanel {
+    top: 38%;
+    .message {
+      display: none;
+    }
+  }
+}
