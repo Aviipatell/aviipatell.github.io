@@ -4,6 +4,7 @@ $main: #edf2f4;
 
 .contactPrompt {
   background-color: $background;
+  padding: 0 28px;
   padding-top: 80px;
   padding-bottom: 240px;
 
@@ -30,15 +31,21 @@ $main: #edf2f4;
 
 @media screen and (max-width: 620px) {
   .buttonContainer {
-    // flex-direction: column;
+    flex-direction: column;
     row-gap: 20px;
-    // align-items: center;
+    align-items: center;
+    // border: 1px solid red;
+
+    a {
+      width: 100%;
+      // border: 1px solid purple;
+    }
   }
 
   .buttonContainer {
     a {
-      flex-basis: 50%;
-      text-align: center;
+      // flex-basis: 50%;
+      // text-align: center;
     }
   }
 }

@@ -53,12 +53,14 @@ const Hero = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <CustomButton giveMarginR accent resumeButton>
-            Connect with Me
+          <CustomButton headerButton giveMarginR accent resumeButton>
+            Connect
           </CustomButton>
         </a>
         <a href={Resume} rel="noreferrer" target="_blank">
-          <CustomButton resumeButton>Resume</CustomButton>
+          <CustomButton headerButton resumeButton>
+            Resume
+          </CustomButton>
         </a>
       </div>
       <HashLink to="/#work" smooth={true} duration={800} className="scrollAni">

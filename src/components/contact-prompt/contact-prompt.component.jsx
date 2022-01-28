@@ -33,7 +33,7 @@ const ContactPrompt = () => {
           target="_blank"
         >
           <CustomButton giveMarginR bottomButton accent resumeButton>
-            Connect with Me
+            Connect
           </CustomButton>
         </a>
         <a href={Resume} rel="noreferrer" target="_blank">

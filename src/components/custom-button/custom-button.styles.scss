@@ -11,7 +11,7 @@ $main: #edf2f4;
   padding: 10px 20px;
   font-size: 1.2em;
   border: 1px solid $accent;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
   &.accent {
@@ -43,10 +43,18 @@ $main: #edf2f4;
   .customButton.giveMarginR {
     margin-right: 0;
   }
+
+  .heroButtons .customButton.headerButton {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 620px) {
   .customButton.giveMarginR.bottomButton {
     margin-right: 0;
+  }
+
+  .customButton.bottomButton {
+    width: 100%;
   }
 }

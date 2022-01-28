@@ -7,12 +7,14 @@ const CustomButton = ({
   giveMarginR,
   resumeButton,
   bottomButton,
+  headerButton,
   ...otherProps
 }) => (
   <button
     className={`${accent ? "accent" : ""} ${giveMarginR ? "giveMarginR" : ""} ${
       bottomButton ? "bottomButton" : ""
-    } ${resumeButton ? "resumeButton" : ""} customButton`}
+    } ${headerButton ? "headerButton" : ""}
+    ${resumeButton ? "resumeButton" : ""} customButton`}
     {...otherProps}
   >
     {children}
