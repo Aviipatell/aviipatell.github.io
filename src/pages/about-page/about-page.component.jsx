@@ -72,7 +72,6 @@ const AboutPage = () => {
         </div>
       </div>
       <ContactPanel id="contactPanel" />
-      <Footer />
     </div>
   );
 };

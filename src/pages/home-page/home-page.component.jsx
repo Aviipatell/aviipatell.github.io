@@ -36,9 +36,8 @@ const HomePage = () => {
       <FeaturedWork />
       <ContactPrompt />
       <ContactPanel />
-      <Footer />
     </div>
-  );
+  ); 
 };
 
 export default HomePage;
