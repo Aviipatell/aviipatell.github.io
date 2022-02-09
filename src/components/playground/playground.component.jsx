@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./playground.styles.css";
+import "./playground.styles.scss";
 
 const Playground = () => {
   return (
