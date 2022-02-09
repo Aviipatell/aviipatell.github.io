@@ -11,6 +11,7 @@ import {
 
 import HomePage from "./pages/home-page/home-page.component";
 import AboutPage from "./pages/about-page/about-page.component";
+import GamingPage from "./pages/gaming-page/gaming-page.component";
 
 import Header from "./components/header/header.component";
 
@@ -22,6 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/gaming" component={AboutPage} />
         </Switch>
       </Router>
     </div>
