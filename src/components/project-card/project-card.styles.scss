@@ -3,7 +3,7 @@ $background: #2b2d42;
 $main: #edf2f4;
 
 .projectCard {
-  //   border: 1px solid red;
+  // border: 1px solid magenta;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,7 @@ $main: #edf2f4;
   border-radius: 12px;
   // box-shadow: 0px 4px 10px rgba(91, 95, 106, 0.235);
   // border: 1px solid red;
+  background-color: rgba(#ffffff, 0.02);
 
   &:last-of-type {
     margin-bottom: 0px;
@@ -21,13 +22,15 @@ $main: #edf2f4;
     // height: 180px;
     border-radius: 12px;
     background-color: rgba(#ffffff, 0.18);
+    align-self: stretch;
     display: flex;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
 
     .image {
       padding: 8% 0;
       width: 90%;
-      height: 90%;
+      height: auto;
     }
   }
 
@@ -44,6 +47,42 @@ $main: #edf2f4;
       line-height: 32px;
     }
 
+    .projectTags {
+      // border: 1px solid green;
+    }
+
+    .projectTags ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      column-gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      row-gap: 10px;
+    }
+
+    .projectTag {
+      font-size: 0.9em;
+      position: relative;
+      background-color: rgba(#4a93fb, 0.6);
+      padding: 2px 8px;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    // .projectTag::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   width: calc(100% + 15px);
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   background-color: red;
+    //   z-index: -1;
+    // }
+
     .tools {
       opacity: 0.66;
       font-size: 0.9em;
@@ -57,10 +96,46 @@ $main: #edf2f4;
     }
 
     .projectLinks {
-      padding-top: 20px;
+      margin-top: 15px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      // border: 1px solid red;
+
+      &.only-right {
+        justify-content: right;
+      }
+
+      .readMoreLink {
+        margin: 0;
+        padding: 0;
+        color: $background;
+        background-color: $main;
+        padding: 2px 8px;
+        font-size: 0.9em;
+        border-radius: 8px;
+      }
+
+      .projectLinks-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        // border: 1px solid red;
+      }
+
+      .liveLink {
+        color: $main;
+        font-size: 1.1em;
+      }
+
+      .githubLink {
+        color: $main;
+        font-size: 1.2em;
+      }
 
       .githubLinkContainer {
         display: flex;
@@ -191,8 +266,8 @@ $main: #edf2f4;
 
     .projectInfo {
       padding-top: 20px;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

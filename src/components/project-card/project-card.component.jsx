@@ -1,5 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./project-card.styles.scss";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import LinkButton from "../link-button/link-button.component";
 import BridgesMockup from "../../assets/images/project-mockup-bridges.png";
@@ -7,57 +11,101 @@ import PokemonMockup from "../../assets/images/project-mockup-pokemon.png";
 import OkRxMockup from "../../assets/images/project-mockup-okrx.png";
 
 const ProjectCard = ({
-  key,
   otherInfo: {
     title,
+    tags,
     tools,
     summary,
     image,
+    readMoreLink,
     githubLink,
     liveLink,
-    learnMoreLink,
   },
-}) => (
-  <div className="projectCard">
-    <div className="projectImage">
-      <img
-        className="image"
-        alt="Project Mockup"
-        src={
-          title === "Bridges to University"
-            ? BridgesMockup
-            : title === "OkRx"
-            ? OkRxMockup
-            : PokemonMockup
-        }
-      />
-    </div>
-    <div className="projectInfo">
-      <h5 className="title">{title}</h5>
-      <p className="tools">{tools}</p>
-      <p className="summary">{summary}</p>
-      <div className="projectLinks">
-        {githubLink ? (
-          <div className="githubLinkContainer">
-            <LinkButton
-              className="accentLink githubLink"
-              text="View on Github"
-              url={githubLink}
-            />
+}) => {
+  console.log(tags);
+
+  return (
+    <div className="projectCard">
+      <div className="projectImage">
+        <img
+          className="image"
+          alt="Project Mockup"
+          src={require(`../../assets/images/${image}`)}
+        />
+      </div>
+      <div className="projectInfo">
+        <h5 className="title">
+          {title} <i className="fa-brands fa-github-square"></i>
+        </h5>
+        <div className="projectTags">
+          {tags && tags.length > 0 ? (
+            <ul className="">
+              {tags.map((tag) => (
+                <li className="projectTag">{tag}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+        <p className="summary">{summary}</p>
+        {readMoreLink ? (
+          <div className="projectLinks">
+            <div className="projectLinks-left">
+              <Link className="readMoreLink" to={readMoreLink}>
+                Read more
+              </Link>
+            </div>
+            <div className="projectLinks-right">
+              {liveLink && (
+                <a
+                  className="liveLink"
+                  href={liveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon="fa-solid fa-link" />
+                </a>
+              )}
+              {githubLink && (
+                <a
+                  className="githubLink"
+                  href={githubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon="fa-brands fa-github" />
+                </a>
+              )}
+            </div>
           </div>
-        ) : null}
-        {liveLink ? (
-          <div className="liveLinkContainer">
-            <LinkButton
-              className="accentLink liveLink"
-              text="View Live"
-              url={liveLink}
-            />
+        ) : (
+          <div className="projectLinks only-right">
+            <div className="projectLinks-right">
+              {liveLink && (
+                <a
+                  className="liveLink"
+                  href={liveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon="fa-solid fa-link" />
+                </a>
+              )}
+              {githubLink && (
+                <a
+                  className="githubLink"
+                  href={githubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon="fa-brands fa-github" />
+                </a>
+              )}
+            </div>
           </div>
-        ) : null}
+        )}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProjectCard;

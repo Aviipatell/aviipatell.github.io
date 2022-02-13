@@ -3,7 +3,7 @@ $background: #2b2d42;
 $main: #edf2f4;
 
 .featureSection {
-  //   border: 1px solid purple;
+  border: 1px solid purple;
   background-color: $background;
   padding: 0 30px;
   padding-top: 80px;
@@ -28,14 +28,15 @@ $main: #edf2f4;
     &::after {
       content: "";
       position: absolute;
-      top: 45%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%);
-      width: 105%;
-      height: 55%;
+      width: calc(100% + 20px);
+      height: 60%;
       z-index: -11;
       background-color: #4a93fb;
-      opacity: 0.35;
+      opacity: 0.4;
+      border-radius: 8px;
     }
   }
 
@@ -43,9 +44,6 @@ $main: #edf2f4;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    // border: 1px solid red;
-
-    // row-gap: 100px;
   }
 }
 

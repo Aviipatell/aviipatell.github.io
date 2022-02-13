@@ -13,7 +13,7 @@ function FeaturedWork() {
       <h3 className="sectionTitle">Featured Work</h3>
       <div className="sectionContent">
         {PROJECTS_DATA.map(({ id, ...otherInfo }) => (
-          <ProjectCard key={id} id={id} otherInfo={otherInfo} />
+          <ProjectCard key={id} otherInfo={otherInfo} />
         ))}
       </div>
     </section>
