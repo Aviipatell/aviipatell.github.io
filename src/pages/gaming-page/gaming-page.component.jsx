@@ -3,6 +3,8 @@ import React from "react";
 import "./gaming-page.styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+
 const GamingPage = () => {
   return (
     <div className="gaming-page">
@@ -19,6 +21,9 @@ const GamingPage = () => {
           to login to save their highscores which will be displayed OR play as a
           guest instead, up to them.
         </p>
+        <div className="gta-lock-pick">
+
+        </div>
       </div>
     </div>
   );
