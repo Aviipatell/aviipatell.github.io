@@ -73,12 +73,16 @@ const AboutPage = () => {
         <Triangle6 className="triangle triangle6" />
 
         <div className="buttonContainer">
-          <a href={Resume} target="_blank">
+          <a
+            href="mailto:avipatel.dev@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <CustomButton giveMarginR accent resumeButton>
               Connect with Me
             </CustomButton>
           </a>
-          <a href={Resume} target="_blank">
+          <a href={Resume} target="_blank" rel="noreferrer">
             <CustomButton resumeButton>Resume</CustomButton>
           </a>
         </div>

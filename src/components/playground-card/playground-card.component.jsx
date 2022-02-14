@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-import "./project-card.styles.scss";
-
+import "./playground-card.styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import DefaultMockup from "../../assets/images/project-mockup-default.png";
 
-const ProjectCard = ({
+const PlaygroundCard = ({
   otherInfo: {
     title,
     tags,
@@ -19,8 +16,6 @@ const ProjectCard = ({
     liveLink,
   },
 }) => {
-  console.log(tags);
-
   const [isLoadingImage, setIsLoadingImage] = useState(true);
 
   const imageLoaded = () => {
@@ -28,9 +23,9 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="projectCard">
-      <Link className="projectImage" to={readMoreLink ? readMoreLink : "/"}>
-        <div className="projectImageContainer">
+    <div className="playground-card">
+      <Link className="image-container" to={readMoreLink}>
+        <div className="image-container-inner">
           <img
             className={`image ${
               isLoadingImage ? "display-block" : "display-none"
@@ -39,31 +34,25 @@ const ProjectCard = ({
             src={DefaultMockup}
           />
           <img
+            src={require(`../../assets/images/${image}`)}
+            alt={title}
             className={`image ${
               isLoadingImage ? "display-none" : "display-block"
             }`}
-            alt="Project Mockup"
-            src={require(`../../assets/images/${image}`)}
             onLoad={imageLoaded}
           />
         </div>
       </Link>
-      <div className="projectInfo">
-        <h5 className="title">
-          {title} <i className="fa-brands fa-github-square"></i>
-        </h5>
-        <div className="projectTags">
-          {tags && tags.length > 0 ? (
-            <ul className="">
-              {tags.map((tag, index) => (
-                <li key={index} className="projectTag">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </div>
-        <p className="summary">{summary}</p>
+      <div className="info-container">
+        <h5 className="info-title">{title}</h5>
+        {tags && tags.length > 0 ? (
+          <ul className="info-tags">
+            {tags.map((tag) => (
+              <li className="info-tag">{tag}</li>
+            ))}
+          </ul>
+        ) : null}
+        <p className="info-summary">{summary}</p>
         {readMoreLink ? (
           <div className="projectLinks">
             <div className="projectLinks-left">
@@ -125,4 +114,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+export default PlaygroundCard;

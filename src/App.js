@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.scss";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,8 +16,12 @@ import {
 
 import HomePage from "./pages/home-page/home-page.component";
 import AboutPage from "./pages/about-page/about-page.component";
+import GamingPage from "./pages/gaming-page/gaming-page.component";
 
 import Header from "./components/header/header.component";
+
+// Add all icons to the library so you can use it in your page
+library.add(fas, far, fab);
 
 function App() {
   return (
@@ -22,6 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/games" component={GamingPage} />
         </Switch>
       </Router>
     </div>

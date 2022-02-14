@@ -1,0 +1,59 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.gaming-page {
+  background: $background;
+  padding: 0 28px;
+  position: relative;
+}
+
+.gaming-head {
+  padding-top: 140px;
+  //   border: 1px solid red;
+  padding-bottom: 30px;
+}
+
+.gaming-title {
+  font-size: 3.2em;
+  color: $main;
+  text-align: center;
+  position: relative;
+  //   border: 1px solid red;
+
+  &:before {
+    content: "coming soon";
+    position: absolute;
+    opacity: 0.08;
+    top: -30px;
+    transform: translate(-50%);
+    left: 50%;
+    font-size: 1.2em;
+    text-transform: lowercase;
+    // border: 1px solid red;
+    width: 100%;
+  }
+}
+
+.gaming-container {
+  .construction-icon {
+    color: $main;
+    padding-top: 20px;
+    font-size: 4.5em;
+    opacity: 0.8;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    // border: 1px solid red;
+  }
+
+  p {
+    color: $main;
+    opacity: 0.8;
+    font-size: 1.2em;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+}
