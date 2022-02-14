@@ -29,7 +29,7 @@ const ProjectCard = ({
 
   return (
     <div className="projectCard">
-      <Link className="projectImage" to={readMoreLink}>
+      <Link className="projectImage" to={readMoreLink ? readMoreLink : "/"}>
         <div className="projectImageContainer">
           <img
             className={`image ${
@@ -55,8 +55,10 @@ const ProjectCard = ({
         <div className="projectTags">
           {tags && tags.length > 0 ? (
             <ul className="">
-              {tags.map((tag) => (
-                <li className="projectTag">{tag}</li>
+              {tags.map((tag, index) => (
+                <li key={index} className="projectTag">
+                  {tag}
+                </li>
               ))}
             </ul>
           ) : null}

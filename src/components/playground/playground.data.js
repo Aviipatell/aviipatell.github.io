@@ -8,7 +8,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A travel companion app created using the Google Maps API with restaurant, hotel and attraction filtering based on Geolocation.",
     image: "project-mockup-travel-advisor.png",
-    readMoreLink: "/projects/travel-advisor/read-more",
+    // readMoreLink: "/projects/travel-advisor/read-more",
     githubLink: "https://github.com/Aviipatell/Travel-Advisor",
     liveLink: "https://travel-advisor-aviipatell.netlify.app/",
   },
@@ -21,7 +21,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A cryptocurrency app which showcased basic crypto stats and recent crypto-related news articles.",
     image: "project-mockup-cryptoverse.png",
-    readMoreLink: "/projects/cryptoverse/read-more",
+    // readMoreLink: "/projects/cryptoverse/read-more",
     githubLink: "https://github.com/Aviipatell/Crypto-App",
     liveLink: "https://aviipatell-cryptoverse.netlify.app/",
   },
@@ -34,7 +34,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A clone made using the Google Search API with image, news and video results filtering.",
     image: "project-mockup-goggl.png",
-    readMoreLink: "/projects/goggl/read-more",
+    // readMoreLink: "/projects/goggl/read-more",
     githubLink: "https://github.com/Aviipatell/Google-Search-Clone",
     liveLink: "https://aviipatell-google-search-clone.netlify.app/search",
   },
@@ -47,7 +47,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A 2-D game inspired by the Nintendo DS Pokémon Games to simulate a player battling NPCs to clear the game.",
     image: "project-mockup-pokemon-game.png",
-    readMoreLink: "/projects/pokemon-game/read-more",
+    // readMoreLink: "/projects/pokemon-game/read-more",
     githubLink: "https://github.com/Aviipatell/Pokemon-Clone",
   },
   {
@@ -59,7 +59,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A simple portfolio concept created using React and tailored to a professional designer, illustrator or developer.",
     image: "project-mockup-portfolio-concept.png",
-    readMoreLink: "/projects/portfolio-concept/read-more",
+    // readMoreLink: "/projects/portfolio-concept/read-more",
     githubLink: "https://github.com/Aviipatell/Portfolio-Concept",
     liveLink: "https://avipatel.me/Portfolio-Concept/",
   },
@@ -72,7 +72,7 @@ const PLAYGROUND_DATA = [
     summary:
       "A webpage for users to browse through movies and select their favourite ones and add them to their nominations.",
     image: "project-mockup-the-shoppies.png",
-    readMoreLink: "/projects/the-shoppies/read-more",
+    // readMoreLink: "/projects/the-shoppies/read-more",
     githubLink: "https://github.com/Aviipatell/The-Shoppies",
     liveLink: "https://avipatel.me/The-Shoppies/",
   },
