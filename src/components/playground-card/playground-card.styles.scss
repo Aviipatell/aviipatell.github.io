@@ -16,6 +16,20 @@ $main: #edf2f4;
     border-radius: 12px;
     justify-content: center;
 
+    .image-container-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .display-block {
+      display: block;
+    }
+
+    .display-none {
+      display: none;
+    }
+
     .image {
       padding: 8% 0;
       width: 90%;

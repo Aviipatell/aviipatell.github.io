@@ -15,12 +15,8 @@ const Header = () => (
 
       <div className="links">
         <NavLink exact className="option" to="/" activeClassName="selected">
-          home
-        </NavLink>
-
-        <HashLink className="option" to="/#work" smooth={true} duration={800}>
           work
-        </HashLink>
+        </NavLink>
 
         <NavLink
           exact
@@ -29,6 +25,15 @@ const Header = () => (
           activeClassName="selected"
         >
           about
+        </NavLink>
+
+        <NavLink
+          exact
+          className="option"
+          to="/games"
+          activeClassName="selected"
+        >
+          games
         </NavLink>
       </div>
     </div>

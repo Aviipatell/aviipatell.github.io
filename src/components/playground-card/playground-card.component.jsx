@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./playground-card.styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DefaultMockup from "../../assets/images/project-mockup-default.png";
 
 const PlaygroundCard = ({
   otherInfo: {
@@ -15,15 +16,33 @@ const PlaygroundCard = ({
     liveLink,
   },
 }) => {
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  const imageLoaded = () => {
+    setIsLoadingImage(false);
+  };
+
   return (
     <div className="playground-card">
-      <div className="image-container">
-        <img
-          src={require(`../../assets/images/${image}`)}
-          alt={title}
-          className="image"
-        />
-      </div>
+      <Link className="image-container" to={readMoreLink}>
+        <div className="image-container-inner">
+          <img
+            className={`image ${
+              isLoadingImage ? "display-block" : "display-none"
+            }`}
+            alt="Project Mockup"
+            src={DefaultMockup}
+          />
+          <img
+            src={require(`../../assets/images/${image}`)}
+            alt={title}
+            className={`image ${
+              isLoadingImage ? "display-none" : "display-block"
+            }`}
+            onLoad={imageLoaded}
+          />
+        </div>
+      </Link>
       <div className="info-container">
         <h5 className="info-title">{title}</h5>
         {tags && tags.length > 0 ? (

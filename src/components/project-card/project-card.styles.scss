@@ -26,6 +26,14 @@ $main: #edf2f4;
     display: flex;
     justify-content: center;
     align-items: center;
+    // border: 1px solid purple;
+
+    .projectImageContainer {
+      // border: 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .image {
       padding: 8% 0;
