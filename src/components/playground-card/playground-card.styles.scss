@@ -1,0 +1,111 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.playground-card {
+  //   border: 1px solid magenta;
+  background-color: rgba(#ffffff, 0.02);
+  border-radius: 12px;
+
+  .image-container {
+    // width: 200px;
+    width: 100%;
+    // border: 1px solid orange;
+    background-color: rgba(#ffffff, 0.18);
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+
+    .image {
+      padding: 8% 0;
+      width: 90%;
+      height: auto;
+      //   border: 1px solid green;
+    }
+  }
+
+  .info-container {
+    // border: 1px solid blue;
+    padding: 15px 20px;
+
+    .info-title {
+      padding: 0;
+      margin: 0;
+      font-size: 1.2em;
+      color: $main;
+      font-weight: 400;
+    }
+
+    .info-tags {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      column-gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      row-gap: 10px;
+    }
+
+    .info-tag {
+      font-size: 0.9em;
+      position: relative;
+      background-color: rgba(#4a93fb, 0.6);
+      padding: 2px 8px;
+      border-radius: 8px;
+      z-index: 1;
+      color: $main;
+    }
+
+    .info-summary {
+      color: $main;
+      font-size: 0.9em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 1.5em;
+    }
+
+    .projectLinks {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      //   border: 1px solid red;
+
+      &.only-right {
+        justify-content: right;
+      }
+
+      .readMoreLink {
+        margin: 0;
+        padding: 0;
+        color: $background;
+        background-color: $main;
+        padding: 2px 8px;
+        font-size: 0.9em;
+        border-radius: 8px;
+      }
+
+      .projectLinks-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        // border: 1px solid red;
+      }
+
+      .liveLink {
+        color: $main;
+        font-size: 1.1em;
+      }
+
+      .githubLink {
+        color: $main;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./project-card.styles.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import DefaultMockup from "../../assets/images/project-mockup-default.png";
 import LinkButton from "../link-button/link-button.component";
 import BridgesMockup from "../../assets/images/project-mockup-bridges.png";
 import PokemonMockup from "../../assets/images/project-mockup-pokemon.png";
@@ -24,13 +25,29 @@ const ProjectCard = ({
 }) => {
   console.log(tags);
 
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  const imageLoaded = () => {
+    setIsLoadingImage(false);
+  };
+
   return (
     <div className="projectCard">
       <div className="projectImage">
         <img
-          className="image"
+          className={`image ${
+            isLoadingImage ? "display-block" : "display-none"
+          }`}
+          alt="Project Mockup"
+          src={DefaultMockup}
+        />
+        <img
+          className={`image ${
+            isLoadingImage ? "display-none" : "display-block"
+          }`}
           alt="Project Mockup"
           src={require(`../../assets/images/${image}`)}
+          onLoad={imageLoaded}
         />
       </div>
       <div className="projectInfo">
