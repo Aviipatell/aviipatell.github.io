@@ -3,7 +3,8 @@ import React from "react";
 import "./gaming-page.styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
+import GTALockPick from "../../games/gta-lock-pick/gta-lock-pick.component";
+import Thermite from "../../games/thermite/thermite.component";
 
 const GamingPage = () => {
   return (
@@ -21,9 +22,8 @@ const GamingPage = () => {
           to login to save their highscores which will be displayed OR play as a
           guest instead, up to them.
         </p>
-        <div className="gta-lock-pick">
-
-        </div>
+        <GTALockPick />
+        <Thermite />
       </div>
     </div>
   );

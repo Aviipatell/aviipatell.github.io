@@ -1,0 +1,64 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.gta-lock-pick {
+  margin-top: 50px;
+  color: $main;
+  padding: 80px 20px;
+  border: 1px solid whitesmoke;
+  display: none;
+}
+
+.gta-lock-pick-canvas {
+}
+
+.outer-circle {
+  height: 200px;
+  width: 200px;
+  border: 1px solid green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner-circle {
+    height: 170px;
+    width: 170px;
+    border: 1px solid;
+    border-color: green green green green;
+    transform: rotate(00deg);
+    border-radius: 50%;
+  }
+}
+
+.demo-rectangle {
+  margin-top: 50px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  background-color: $main;
+  opacity: 0.5;
+  clip-path: circle(50px at 100px 100px);
+  position: relative;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     background-color: red;
+  //   }
+}
+
+.demo-circle {
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  background-color: $main;
+  opacity: 0.5;
+  clip-path: ellipse(50px 60px at 100px 100px);
+}

@@ -1,0 +1,14 @@
+$accent: #4a93fb;
+$background: #2b2d42;
+$main: #edf2f4;
+
+.thermite-container {
+  border: 1px solid $main;
+  padding: 80px 20px;
+
+  .box {
+    width: 400px;
+    height: 600px;
+    border: 1px solid $main;
+  }
+}
